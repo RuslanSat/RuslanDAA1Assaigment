@@ -14,16 +14,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== Divide and Conquer Algorithms Demo ===\n");
 
-        // Demo 1: Sorting Algorithms
         demoSortingAlgorithms();
 
-        // Demo 2: Selection Algorithm
         demoSelectionAlgorithm();
 
-        // Demo 3: Geometric Algorithm
         demoGeometricAlgorithm();
 
-        // Demo 4: Performance Comparison
         demoPerformanceComparison();
     }
 
