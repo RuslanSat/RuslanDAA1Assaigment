@@ -1,4 +1,4 @@
-package sort;
+package algo.sort;
 
 import org.junit.jupiter.api.Test;
 import util.Metrics;
@@ -8,16 +8,16 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class MergeSortTest {
+class QuickSortTest {
 
     @Test
     void testSmallArray() {
-        int[] arr = {5, 3, 8, 1, 2};
+        int[] arr = {9, 3, 7, 1, 4};
         int[] expected = arr.clone();
         Arrays.sort(expected);
 
         Metrics.reset();
-        MergeSort.sort(arr);
+        QuickSort.sort(arr);
         assertArrayEquals(expected, arr);
 
         System.out.println("SmallArray -> comparisons=" + Metrics.getComparisons() +
@@ -27,12 +27,12 @@ class MergeSortTest {
     @Test
     void testRandomArray() {
         Random rnd = new Random(42);
-        int[] arr = rnd.ints(1000, -1000, 1000).toArray();
+        int[] arr = rnd.ints(1000, -5000, 5000).toArray();
         int[] expected = arr.clone();
         Arrays.sort(expected);
 
         Metrics.reset();
-        MergeSort.sort(arr);
+        QuickSort.sort(arr);
         assertArrayEquals(expected, arr);
 
         System.out.println("RandomArray -> comparisons=" + Metrics.getComparisons() +
@@ -45,7 +45,7 @@ class MergeSortTest {
         int[] expected = arr.clone();
 
         Metrics.reset();
-        MergeSort.sort(arr);
+        QuickSort.sort(arr);
         assertArrayEquals(expected, arr);
 
         System.out.println("AlreadySorted -> comparisons=" + Metrics.getComparisons() +
